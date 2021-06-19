@@ -1,0 +1,12 @@
+canvas{
+    background-repeat: no-repeat;
+    background-position:
+    bottom 0px left 10px,
+    bottom 0px right 10px,
+    center center;
+    
+     background-image:
+    url(../images/left-hand.png),
+    url(../images/right-hand.png),
+    url(../images/keyboard.png);
+    }
