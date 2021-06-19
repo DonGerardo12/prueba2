@@ -1,0 +1,35 @@
+.container-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .instruction-container{
+    width: 500px;
+    height: 300;
+    padding: 10px 20px;
+    background: #898989;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .select{
+    width: 30%;
+    margin-right: 5%;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #645E5E;
+    padding: 10px;
+  }
+  
+  .button-init{
+    padding: 10px;
+    background: #D3D3D3;
+    color: black;
+    border: 1px solid #D3D3D3;
+    width: 25%;
+  }
+  
+    .button-init:hover{
+      cursor: pointer;
+    }
