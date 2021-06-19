@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mecanografia</title>
+
+  <link rel="stylesheet" href="assets/css/core.css">
+</head>
+<body>
+  
+  <div class="container-flex">
+    <div class="instruction-container">
+      <h1>Instrucciones</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tenetur quaerat omnis corrupti. Optio iusto eveniet explicabo velit facere repellendus voluptatum accusantium aliquid est, voluptatem ex reiciendis ut culpa nihil.</p>
+      
+      <form action="game.html">
+        <select  name="levels" id="levels" class='select'>
+          <option value="0" selected='selected'>- Nivel -</option>
+        </select>
+  
+        <select  name="exercise" id="exercise" class='select'>
+          <option value="0" selected='selected'>- Ejercicio -</option>
+        </select>
+        <button class='button-init'>Iniciar</button>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="assets/js/niveles.js"></script>
+
+  <script>
+
+    selectLevels = document.getElementById('levels')
+    selectExercises = document.getElementById('exercise')
+
+    niveles.forEach( nivel => {
+      let option = document.createElement( 'option' )
+      option.value = nivel.uid
+      option.text = nivel.label
+      selectLevels.appendChild( option )
+    } )
+
+    selectLevels.addEventListener( 'change', function(){
+      let exercises = niveles.filter( item => item.uid == this.value )[0]
+
+      selectExercises.innerHTML = null
+      let option = document.createElement( 'option' )
+      option.value = 0
+      option.text = '- Ejercicio -'
+      selectExercises.appendChild( option )
+
+      exercises.ejercicios.forEach( exercise => {
+        let option = document.createElement( 'option' )
+        option.value = exercise.id
+        option.text = exercise.label
+        selectExercises.appendChild( option )
+      } )
+
+    } )
+  </script>
+
+</body>
+</html>
